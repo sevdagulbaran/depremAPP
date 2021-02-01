@@ -1,0 +1,30 @@
+<ion-view view-title="Depremler ">
+  <ion-content>
+
+
+
+  <ion-content>
+
+
+
+
+<div class="list list-inset">
+  <label class="item item-input">
+    <i class="icon ion-search placeholder-icon"></i>
+    <input type="text" placeholder="Search" ng-model= "kelime" ng- change="bul(kelime)">
+  </label>
+</div>
+
+
+
+
+    <ion-list>
+      <ion-item ng-repeat="deprem in depremler" href="#/app/playlists/{{depremler.id}}">
+        {{deprem.yer}}
+      </ion-item>
+
+
+
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,36 @@
+<ion-view view-title="Depremler ">
+  <ion-content>
+
+
+
+<div class="list list-inset">
+  <label class="item item-input">
+    <i class="icon ion-search placeholder-icon"></i>
+    <input type="text" placeholder="Search" ng-model= "kelime"  >
+  </label>
+</div>
+
+
+
+<div class="list" style="background-color: gray;"  >
+
+ 
+  <a class="item item-icon-left" ng-repeat="deprem in depremler | filter :kelime" href="#/app/deprem/{{deprem.id}}">
+ 
+   <div >
+     <p style="font-weight:bold; color:green; ">
+       <i class="icon ion-map" style="color :black"> </i>
+     {{deprem.yer}} </p>
+       <p> Derinlik: {{deprem.derinlik}} </p>
+     <p>{{deprem.tarih}}  {{deprem.saat}} </p>
+
+
+   </div>
+    <span class="badge badge-assertive">{{deprem.siddet}}</span>
+  </a>
+
+</div>
+
+
+  </ion-content>
+</ion-view>
